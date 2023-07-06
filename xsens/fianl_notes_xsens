@@ -1,0 +1,18 @@
+Final notes on the use of XSens alone
+
+No significaant difference seems to exist bebtween good_xsens (just trajectory reconstruction) and the kalman filter version (KF_XSens).
+
+The rotation brings each data point into the ENU frame, to keep a corect reference of motion. 
+
+Data filtering is applied to eliminate sharp accelerations (outliers) and to eliminate noise (smoothing). 
+
+Furthermore, the last position is imposed to be the same as the first position, if this is the case. This is a first version of data manipulation through case study.
+
+Also the sample rate is set at 15 hz. Lowwer sample rates  reduce the integration errors.
+
+Unfortunately the results were not satisfactory anyway, due to the errors accumulated ad the impossibility to set constraints.
+Further study of the case study throhugh the moion and data collected could help set some constraints that could help integrate the results of the trajetory integration to obtain better results.
+
+Further testing also has to be done with the case of inntegrating the xsense with he creaform. It is possible that integrating only very short lapses of time here the creaform looses the view moght ennder useless further  incrreases in complexity of the xsense algorithm. 
+
+The next step is to enact data collection and do further testing. 
